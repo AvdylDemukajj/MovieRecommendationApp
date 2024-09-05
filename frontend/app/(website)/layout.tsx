@@ -40,3 +40,23 @@ export async function sharedMetaData(params) {
     }
   };
 }
+
+export async function generateMetadata({ params }) {
+  return await sharedMetaData(params);
+}
+
+export default async function Layout({ children, params }) {
+  const settings = await getSettings();
+  return (
+    <>
+      <head>
+        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+      </head>
+      <Navbar {...settings} />
+
+      <div>{children}</div>
+
+      <Footer {...settings} />
+    </>
+  );
+}
