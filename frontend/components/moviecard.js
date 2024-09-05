@@ -81,6 +81,35 @@ export default function MovieCard({
                 </span>
               </Link>
             </h2>
+            <div className="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400">
+              <div className="flex items-center gap-3">
+                <div className="relative h-5 w-5 flex-shrink-0">
+                  {movie.Poster && (
+                    <Image
+                      src={movie.Poster}
+                      alt={movie.Poster}
+                      className="rounded-full object-cover"
+                      fill
+                      sizes="20px"
+                    />
+                  )}
+                </div>
+                <span className="truncate text-sm">
+                  {movie.Language}
+                </span>
+              </div>
+              <span className="text-xs text-gray-300 dark:text-gray-600">
+                &bull;
+              </span>
+              <span>{movie.Year}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
 
 
 
