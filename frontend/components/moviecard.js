@@ -42,4 +42,25 @@ export default function MovieCard({
             />
           </Link>
         </div>
+        <div className={cx(minimal && "flex items-center")}>
+          <div>
+            <div className="flex gap-3 text-lg">
+              <div className="mt-5 flex flex-row items-center space-x-1 text-sm font-medium uppercase">
+                <span>
+                  <StarIcon className="text-2xl" color="#95a4fc" />
+                </span>
+                <p className="text-md text-[#95a4fc]">
+                  {movie.imdbRating}
+                </p>
+              </div>
+              <div className="mt-5 flex flex-row items-center space-x-1 text-sm font-medium uppercase">
+                <span>
+                  <IconThumbUp size={20} color="#e1591a" />
+                </span>
+                <p className="text-md text-[#e1591a]">
+                  {movie.imdbVotes}
+                </p>
+              </div>
+            </div>
+
 
