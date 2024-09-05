@@ -5,6 +5,7 @@ import { urlForImage } from "@/lib/sanity/image";
 import Navbar from "@/components/navbar";
 import NavbarAlt from "@/components/navbaralt";
 import { cx } from "@/utils/all";
+
 import Footer from "@/components/footer";
 
 export default function Layout(props) {
@@ -40,7 +41,8 @@ export default function Layout(props) {
           cardType: "summary_large_image"
         }}
       />
-        <div
+
+      <div
         className={cx(
           props?.fontStyle,
           "antialiased text-gray-800 dark:bg-black dark:text-gray-400"
@@ -50,13 +52,11 @@ export default function Layout(props) {
         ) : (
           <Navbar {...props} />
         )}
+
         <div>{children}</div>
 
-      <Footer {...props} />
+        <Footer {...props} />
       </div>
-      </>
-      );
-      }
-
-
-
+    </>
+  );
+}
