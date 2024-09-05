@@ -12,3 +12,8 @@ final_data['movie_title'] = final_data['movie_title'].str.strip().str.lower()
 with open('similarity.pkl', 'rb') as file:
     similarity = pickle.load(file)
 
+@app.route("/")
+def home():
+    return {"message": "Hello from the recommendation backend"}
+
+
