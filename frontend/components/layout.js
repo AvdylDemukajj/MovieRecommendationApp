@@ -50,5 +50,13 @@ export default function Layout(props) {
         ) : (
           <Navbar {...props} />
         )}
+        <div>{children}</div>
+
+      <Footer {...props} />
+      </div>
+      </>
+      );
+      }
+
 
 
