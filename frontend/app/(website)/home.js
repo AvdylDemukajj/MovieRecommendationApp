@@ -45,4 +45,19 @@ export default function Post() {
         console.error("Error:", error);
       }
     };
+
+      // Effect to fetch movie details when the Enter key is pressed and searchVal changes
+  useEffect(() => {
+    const handleKeyDown = event => {
+      if (event.key === "Enter") {
+        fetchSearchResults();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    // Cleanup the event listener
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [searchVal]);
+
   
