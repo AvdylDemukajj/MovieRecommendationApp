@@ -33,6 +33,24 @@ export default function About({ authors, settings }) {
           );
         })}
       </div>
+
+      <div className="mx-auto prose text-center dark:prose-invert mt-14">
+        <p>
+          We provide real-time connectivity to enable software
+          providers and financial institutions to build integrated
+          products for their small business customers.
+        </p>
+        <p>
+          Our API infrastructure is leveraged by clients ranging from
+          lenders to corporate card providers and business forecasting
+          tools, with use cases including automatic reconciliation,
+          business dashboarding, and loan decisioning.
+        </p>
+        <p>
+          <Link href="/contact">Get in touch</Link>
+        </p>
+      </div>
     </Container>
   );
 }
+
