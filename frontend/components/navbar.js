@@ -82,4 +82,52 @@ export default function Navbar(props) {
                       </div>
                     )}
                   </Link>
+                  <Link href="/" className="hidden w-28 dark:block">
+                    {props.logoalt ? (
+                      <Image
+                        {...urlForImage(props.logoalt)}
+                        alt="Logo"
+                        priority={true}
+                        sizes="(max-width: 640px) 100vw, 200px"
+                      />
+                    ) : (
+                      <div className="flex flex-col items-center">
+                        <lord-icon
+                          src="https://cdn.lordicon.com/tlvdupnp.json"
+                          trigger="loop"
+                          delay="2000"
+                          style={{
+                            width: "40px",
+                            height: "40px"
+                          }}></lord-icon>
+                        <span className={`font-sacramento  text-3xl font-bold text-white`}>
+                          CineMatch
+                        </span>
+                      </div>
+                    )}
+                  </Link>
+                  <Disclosure.Button
+                    aria-label="Toggle Menu"
+                    className="ml-auto rounded-md px-2 py-1 text-gray-500 focus:text-blue-500 focus:outline-none md:hidden dark:text-gray-300 ">
+                    <svg
+                      className="h-6 w-6 fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24">
+                      {open && (
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+                        />
+                      )}
+                      {!open && (
+                        <path
+                          fillRule="evenodd"
+                          d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+                        />
+                      )}
+                    </svg>
+                  </Disclosure.Button>
+                </div>
+
 
